@@ -7,6 +7,10 @@ export default class Home extends Component {
     this.props.history.push("/login");
   };
 
+  irParaCards = (event) => {
+    this.props.history.push("/cards");
+  };
+
   render() {
     const id = 4;
     return (
@@ -27,6 +31,7 @@ export default class Home extends Component {
         <img id="pokebola" src={Pokebola} alt=" Pokebola" />
         <br /> <br />
         <button onClick={this.voltar}>Voltar </button>
+        <button onClick={this.irParaCards}>Card </button>
       </div>
     );
   }
