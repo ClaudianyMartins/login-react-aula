@@ -11,11 +11,20 @@ export default class Home extends Component {
     this.props.history.push("/cards");
   };
 
+  irParaProdutos = (event) => {
+    this.props.history.push("/produtos");
+  };
+
   render() {
     const id = 4;
     return (
       <div>
         <h1> Bem vindo à Home </h1> <br />
+        <br />
+        <button onClick={this.voltar}>Voltar </button>
+        <button onClick={this.irParaCards}>Card </button>
+        <button onClick={this.irParaProdutos}>Produtos </button>
+        <br /> <br />
         <img
           src="https://assets-cdn.kangaroo.com.br/images/maldivas/water-villa-maalifushi-by-como-ilhas-maldivas.jpg"
           alt="ilhas maldivas"
@@ -30,8 +39,6 @@ export default class Home extends Component {
         <br /> <br />
         <img id="pokebola" src={Pokebola} alt=" Pokebola" />
         <br /> <br />
-        <button onClick={this.voltar}>Voltar </button>
-        <button onClick={this.irParaCards}>Card </button>
       </div>
     );
   }

@@ -18,7 +18,7 @@ export default class Login extends Component {
 
   fazerLogin = (event) => {
     event.preventDefault();
-    if (this.state.usuario === "aaa" && this.state.senha === "123") {
+    if (this.state.usuario === "a" && this.state.senha === "1") {
       this.setState({ erro: "" });
       this.props.history.push("/home");
     } else {
