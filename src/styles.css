@@ -3,8 +3,8 @@
   text-align: center;
 }
 
-button {
-  width: 70px;
+.btn {
+  /* width: 70px; */
   height: 30px;
   background-color: darkblue;
   color: white;
