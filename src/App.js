@@ -4,6 +4,7 @@ import { GlobalStyles } from "./Components/Tema/GlobalStyles";
 import { lightTheme, darkTheme } from "./Components/Tema/Themes";
 import "./styles.css";
 import Routes from "./router";
+import Switch from "react-switch";
 
 export default function App() {
   const [theme, setTheme] = useState("light");
@@ -17,9 +18,7 @@ export default function App() {
       <>
         <GlobalStyles />
         <div className="App">
-          <button className="btn" onClick={themeToggler}>
-            Alterar tema
-          </button>
+          <Switch onChange={themeToggler} />
           <Routes />
         </div>
       </>
