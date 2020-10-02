@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./Components/Tema/GlobalStyles";
 import { lightTheme, darkTheme } from "./Components/Tema/Themes";
@@ -6,11 +6,25 @@ import "./styles.css";
 import Routes from "./router";
 import Switch from "react-switch";
 
+const useStateWithLocalStorage = (localStorageKey) => {
+  const [theme, setTheme] = React.useState(
+    localStorage.getItem(localStorageKey) || "light"
+  );
+
+  useEffect(() => {
+    localStorage.setItem(localStorageKey, theme);
+  }, [theme]);
+
+  return [theme, setTheme];
+};
+
 export default function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useStateWithLocalStorage("@Theme");
 
   const themeToggler = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
+    localStorage.clear();
+    localStorage.setItem("@Theme", theme);
   };
 
   return (

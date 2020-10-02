@@ -49,7 +49,10 @@ export default class Login extends Component {
           />
           <br />
           <br />
-          <button onClick={this.fazerLogin}> Entrar </button>
+          <button className="btn" onClick={this.fazerLogin}>
+            {" "}
+            Entrar{" "}
+          </button>
         </form>
       </div>
     );

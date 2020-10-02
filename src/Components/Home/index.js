@@ -21,9 +21,15 @@ export default class Home extends Component {
       <div>
         <h1> Bem vindo à Home </h1> <br />
         <br />
-        <button onClick={this.voltar}>Voltar </button>
-        <button onClick={this.irParaCards}>Card </button>
-        <button onClick={this.irParaProdutos}>Produtos </button>
+        <button className="btn" onClick={this.voltar}>
+          Voltar{" "}
+        </button>
+        <button className="btn" onClick={this.irParaCards}>
+          Card{" "}
+        </button>
+        <button className="btn" onClick={this.irParaProdutos}>
+          Produtos{" "}
+        </button>
         <br /> <br />
         <img
           src="https://assets-cdn.kangaroo.com.br/images/maldivas/water-villa-maalifushi-by-como-ilhas-maldivas.jpg"
